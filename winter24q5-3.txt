@@ -1,0 +1,33 @@
+public class Winter2453 {
+    public static void main(String[] args) {
+        Customer c1 = new Customer("vishesh", "mobile");
+        Customer c2 = new Customer("nirmit", "mobile");
+
+        c1.start();
+        c2.start();
+    }
+}
+
+class Customer extends Thread {
+    String name;
+    String productName;
+    static int productQuantity = 1;
+
+    public Customer(String name, String productName) {
+        this.name = name;
+        this.productName = productName;
+    }
+
+    public void run() {
+        synchronized (Customer.class) {
+            System.out.println(name + " : " + productName);
+        }
+        if (productQuantity > 0) {
+            System.out.println(name + "is trying to buy" + productName);
+            productQuantity--;
+        } else {
+            System.out.println("sorry product is not available");
+        }
+    }
+
+}

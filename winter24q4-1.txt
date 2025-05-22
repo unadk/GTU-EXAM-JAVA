@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
+public class Winter2441 {
+    public static void main(String[] args) {
+        List<Integer> original = new ArrayList<>();
+
+        original.add(4);
+        original.add(6);
+        original.add(8);
+
+        List<Integer> copied = new ArrayList<>(original.size());
+
+        for (int i = 0; i < original.size(); i++) {
+            copied.add(null);
+        }
+
+        Collections.copy(copied, original);
+
+        System.out.println("originalList:" + original);
+
+        System.out.println("copiedList:" + copied);
+
+    }
+}

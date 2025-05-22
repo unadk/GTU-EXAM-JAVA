@@ -1,0 +1,36 @@
+public class Winter24 {
+    public static void main(String[] args) {
+        Account obj = new Account();
+        obj.display();
+        obj.setData();
+        obj.deposit(500);
+    }
+}
+
+class Account {
+    int acNo = 101;
+    String name = "vishesh";
+    double balence = 5687.00;
+
+    public void display() {
+        System.out.println(acNo + "  : " + name + " : " + balence);
+    }
+
+    public void setData() {
+        acNo = 102;
+        name = "nirmit";
+        balence = 2345.09;
+
+        System.out.println(acNo + "  : " + name + " : " + balence);
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balence += amount;
+            System.out.println(amount);
+        } else {
+            System.out.println("invalid deposit amount");
+        }
+    }
+
+}
