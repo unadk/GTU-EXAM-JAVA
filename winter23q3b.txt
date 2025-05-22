@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Winter233b {
+    public static void main(String[] args) {
+        String[] district = { "rajkot", "gondal", "surat", "vadodara", "junagadh" };
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter index from (1 to 4)");
+        int index = sc.nextInt();
+
+        if (index >= 0 && index < district.length) {
+            System.out.println(index + " : " + district[index]);
+        } else {
+            System.out.println("not valid");
+        }
+    }
+}

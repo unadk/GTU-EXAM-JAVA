@@ -1,0 +1,22 @@
+public class Winter232c {
+    public static void main(String[] args) {
+        Rectangle obj = new Rectangle();
+
+        int res = obj.getArea(4, 9);
+        System.out.println(res);
+
+    }
+}
+
+class Rectangle {
+    int length = 0;
+    int width = 0;
+
+    public Rectangle() {
+        System.out.println("length and width both initially set to zero");
+    }
+
+    public int getArea(int l, int b) {
+        return l * b;
+    }
+}

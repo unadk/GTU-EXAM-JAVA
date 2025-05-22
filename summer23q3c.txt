@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Summer233c {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("enter number 1");
+        int num1 = sc.nextInt();
+        System.out.println("enter number 2");
+        int num2 = sc.nextInt();
+
+        try {
+            int res1 = num1 + num2;
+            if (res1 < 0)
+                throw new Exception();
+            else
+                System.out.println(res1);
+
+        } catch (Exception e) {
+            System.out.println("please add two positive integer");
+        }
+
+        try {
+            int res2 = num1 / num2;
+            if (num2 == 0)
+                throw new ArithmeticException();
+            else
+                System.out.println(res2);
+        }
+
+        catch (ArithmeticException e) {
+            System.out.println("you can not divide by zero");
+        }
+
+    }
+}
